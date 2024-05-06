@@ -4,3 +4,6 @@ git ad [..]
 git commit -m [message]
 git remote add origin [url]
 git branch -M main
+
+// tạo nhánh và chuyển nhánh
+git checkout -b [branch_name]
