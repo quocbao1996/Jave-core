@@ -4,7 +4,7 @@ public class IfElseDemo {
         if (month == 1  ) {
             System.out.println("có 31 ngày");
         } else if (month == 11 ) {
-            System.out.println("có 31 ngày");
+            System.out.println("có 30 ngày");
         }
         else {
             System.out.println("k bik");
