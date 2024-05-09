@@ -2,7 +2,6 @@ import java.util.Scanner;
 
 public class ScannerDemo {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner();
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Nhập vào tên của bạn:");
