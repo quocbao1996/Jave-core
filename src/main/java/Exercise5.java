@@ -1,8 +1,7 @@
 import java.util.Scanner;
 
 public class Exercise5 {
-    public static void main(String[] args) {
-        // Question 05
+    void question05 () {
         Scanner scanner = new Scanner(System.in);
         Account account = new Account();
         System.out.println("nhập vào id account");
@@ -11,9 +10,9 @@ public class Exercise5 {
         System.out.println("nhập vào username");
         account.username = scanner.nextLine();
         System.out.println("nhập vào fullname");
-        account.fullName= scanner.nextLine();
+        account.fullName = scanner.nextLine();
         System.out.println("nhập vào email");
-        account.email= scanner.nextLine();
+        account.email = scanner.nextLine();
         Position position = new Position();
         System.out.println("nhập vào position id: ");
         position.id = scanner.nextInt();
@@ -24,7 +23,7 @@ public class Exercise5 {
         System.out.println("3. TEST");
         System.out.println("4. SCRUM MASTER");
         int menu = scanner.nextInt();
-        switch (menu){
+        switch (menu) {
             case 1:
                 System.out.println(position.name = PositionName.DEV);
                 break;
@@ -42,5 +41,18 @@ public class Exercise5 {
         System.out.println("username = " + account.username);
         System.out.println("fullName = " + account.fullName);
         System.out.println("email = " + account.email);
+    }
+    void question06 () {
+        Scanner scanner = new Scanner(System.in);
+        Department department = new Department();
+        System.out.println("nhập id department= ");
+        department.id = scanner.nextInt();
+        scanner.nextLine();
+        System.out.println("nhập name department = ");
+        department.name = scanner.nextLine();
+        System.out.println("department.id = " + department.id);
+        System.out.println("department.name = " + department.name);
+
+
     }
 }
