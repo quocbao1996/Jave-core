@@ -50,7 +50,7 @@ public class Exercise04 {
             System.out.println("Nhập họ tên: ");
             String name = scanner.nextLine();
             String name2 = name.trim();
-            System.out.println("tên bạn là :" + name2);
+            System.out.println("tên bạn là " + name2);
 
 
 
