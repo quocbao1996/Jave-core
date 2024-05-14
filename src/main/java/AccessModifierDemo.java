@@ -6,9 +6,13 @@ public class AccessModifierDemo {
         Dog dog1 = new Dog();
         dog1.age = 3;
         System.out.println("dog1.age = " + dog1.age);
-        // protected: có thể truy cập dc trong cùng package
-        // default: có thể truy cập dc trong cùng package
-        // private
+         // protected: Có thể truy cập được trong cùng package
+        // default: Có thể truy cập được trong cùng package
+        // dog1.color = "Black";
+        // System.out.println("dog1.color = " + dog1.color);
+
+        // private: Chỉ có thể truy cập trong class đó
+        // System.out.println("dog1.iq = " + dog1.iq);
 
     }
 }
