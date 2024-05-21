@@ -7,4 +7,5 @@ public class Account {
     Department department;
     Position position;
     LocalDate createdDate;
+    Group[] groups;
 }

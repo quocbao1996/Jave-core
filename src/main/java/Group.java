@@ -4,4 +4,5 @@ public class Group {
     String name;
     Account creator;
     LocalDate createdDate;
+    Account[] accounts;
 }
