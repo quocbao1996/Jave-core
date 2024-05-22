@@ -1,2 +1,4 @@
-package entity;public class MyMath {
+package entity;
+
+public class MyMath {
 }
