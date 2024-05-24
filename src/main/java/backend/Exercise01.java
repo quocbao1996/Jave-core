@@ -1,5 +1,8 @@
 package backend;
 
+import entity.MyMath;
+import entity.PrimaryStudent;
+import entity.SecondaryStudent;
 import entity.Student;
 
 public class Exercise01 {
@@ -39,6 +42,13 @@ public class Exercise01 {
         s3.moneyGroup += 50;
         System.out.println("Student.moneyGroup = " + Student.moneyGroup);
     }
+    public static void question03(){
+        int b = MyMath.min(4,7);
+        System.out.println(b);
+    }
+    public static void question04(){
+        // thêm getter và setter
+    }
     public static void question05(){
         Student s1 = new Student( "Nguyễn Văn A");
         Student s2 = new Student("Nguyễn Văn B");
@@ -47,5 +57,13 @@ public class Exercise01 {
         System.out.println("s1 = " + s1);
         System.out.println("s2 = " + s2);
         System.out.println("s3 = " + s3);
+    }
+    public static void question06(){
+    Student s1 = new PrimaryStudent("A");
+    Student s2 = new PrimaryStudent("B");
+    Student s3 = new SecondaryStudent("C");
+    Student s4 = new SecondaryStudent("D");
+    Student s5 = new SecondaryStudent("E");
+    Student s6 = new SecondaryStudent("F");
     }
 }

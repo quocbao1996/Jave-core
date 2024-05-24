@@ -5,10 +5,14 @@ public class Student {
    private int id;
 
     public Student( String name) {
+        if (count >= 7){
+            throw new IllegalStateException("Tối đa 7 học sinh");
+        }
         count++;
         this.id = count;
         this.name = name;
     }
+
     public static int moneyGroup;
     public static String college;
     public static int count;
