@@ -15,7 +15,7 @@ public class StringMethodDemo {
         System.out.println("s.indexOf('a') = " + s.indexOf('a')); // trả ký tự từ trái qua phải
         System.out.println("s.lastIndexOf('a') = " + s.lastIndexOf('a')); // trả ký tự từ phải qua trái
         System.out.println("s.contains(\"Core\") = " + s.contains("Core")); // kiểm tra chuỗi có chứa chuỗi cần tìm hay k
-        System.out.println("search.trim() = " + search.trim()); // loại bỏ khoảng cách
+        System.out.println("search.trim() = " + search.trim()); // loại bỏ khoảng cách đầu cuối
         String[] words = name.split(" "); // tách các chữ qua dấu cách
         for (String word : words) {
             System.out.println("word = " + word);
