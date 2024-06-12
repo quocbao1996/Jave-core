@@ -1,38 +1,36 @@
-package com.vti.service;
+package com.vti.controller;
 
 import com.vti.entity.User;
-import com.vti.repository.IUserRepository;
+import com.vti.service.IUserService;
 import lombok.AllArgsConstructor;
 
-import java.io.IOException;
-import java.sql.SQLException;
 import java.util.List;
 
 @AllArgsConstructor
-public class UserService implements  IUserService {
-    private IUserRepository repository;
-    @Override
-    public List<User> findAll() throws SQLException, IOException {
-        return repository.findAll();
+public class UserController {
+    private IUserService service;
+
+    /**
+     * @return Danh sách user trong database
+     *
+     * */
+    public List<User> findEmployeeByProjectId(int projectID) {
+        return service.findEmployeeByProjectId(projectID);
     }
 
-    @Override
-    public User findById(int id) throws SQLException, IOException {
-        return repository.findById(id);
+    public List<User> findManager  (){
+        return service.findManager();
     }
 
-    @Override
-    public User findByEmailAndPassword(String email, String password) throws SQLException, IOException {
-        return repository.findByEmailAndPassword(email, password);
+
+
+    /**
+     * @param email email Manager
+     * @param password password Manager
+     * @return thông tin user tương ứng với email và password, hoặc null nếu thông tin không tồn tại
+     */
+    public User findManagerByEmailAndPassword(String email, String password) {
+        return service.findManagerByEmailAndPassword(email, password);
     }
 
-    @Override
-    public int create(String fullName, String email) throws SQLException, IOException {
-        return repository.create(fullName,email);
-    }
-
-    @Override
-    public int deleteById(int id) throws SQLException, IOException {
-        return repository.deleteById(id);
-    }
 }
