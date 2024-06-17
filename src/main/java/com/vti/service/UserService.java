@@ -12,30 +12,30 @@ import java.util.List;
 public class UserService implements  IUserService {
     private IUserRepository repository;
     @Override
-    public List<User> findEmployeeByProjectId(int projectID)  {
+    public List<User> findEmployeeAndManagerByProjectId(int projectID)  {
         try {
-            return repository.findEmployeeByProjectId(projectID);
+            return repository.findEmployeeAndManagerByProjectId(projectID);
         } catch (SQLException | IOException exception) {
          return List.of();
         }
     }
-    @Override
-    public List<User> findManager()  {
-        try {
-            return repository.findManager();
-        } catch (SQLException | IOException exception) {
-            return List.of();
-        }
-    }
+
 
     @Override
-    public User findManagerByEmailAndPassword(String email, String password) {
+    public User findAdminByEmailAndPassword(String email, String password) {
         try {
-            return repository.findManagerByEmailAndPassword(email, password);
+            return repository.findAdminByEmailAndPassword(email,password);
         }catch (SQLException | IOException exception){
             return null;
         }
     }
 
-
+    @Override
+    public int createEmployee(String fullName, String email) {
+        try {
+            return repository.createEmployee(fullName,email);
+        }catch (SQLException | IOException exception){
+            return 0;
+        }
+    }
 }

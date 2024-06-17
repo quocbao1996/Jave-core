@@ -14,23 +14,20 @@ public class UserController {
      * @return Danh sách user trong database
      *
      * */
-    public List<User> findEmployeeByProjectId(int projectID) {
-        return service.findEmployeeByProjectId(projectID);
+    public List<User> findEmployeeByAndManagerProjectId(int projectID) {
+        return service.findEmployeeAndManagerByProjectId(projectID);
     }
-
-    public List<User> findManager  (){
-        return service.findManager();
-    }
-
-
 
     /**
      * @param email email Manager
      * @param password password Manager
      * @return thông tin user tương ứng với email và password, hoặc null nếu thông tin không tồn tại
      */
-    public User findManagerByEmailAndPassword(String email, String password) {
-        return service.findManagerByEmailAndPassword(email, password);
+    public User findAdminByEmailAndPassword(String email, String password) {
+        return service.findAdminByEmailAndPassword(email, password);
+    }
+    public int createEmployee (String fullname, String email){
+        return service.createEmployee(fullname,email);
     }
 
 }

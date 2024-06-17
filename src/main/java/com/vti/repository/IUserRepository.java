@@ -7,9 +7,8 @@ import java.sql.SQLException;
 import java.util.List;
 
 public interface IUserRepository {
-    List<User> findEmployeeByProjectId(int projectId) throws SQLException, IOException;
+    List<User> findEmployeeAndManagerByProjectId(int projectId) throws SQLException, IOException;
 
-    List<User> findManager() throws SQLException, IOException;
-
-    User findManagerByEmailAndPassword(String email, String password) throws SQLException, IOException;
+    User findAdminByEmailAndPassword(String email, String password) throws SQLException, IOException;
+    int createEmployee(String email, String password) throws SQLException, IOException;
 }
