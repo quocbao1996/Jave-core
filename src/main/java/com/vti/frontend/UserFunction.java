@@ -14,9 +14,9 @@ public class UserFunction {
     public void showMenu()  {
         while (true) {
             System.out.println("1. Đăng nhập giành cho Admin");
-            System.out.println("2. Hiển thị danh sách Employee theo project id");
-            System.out.println("3. thêm nhân viên");
-            System.out.println("4. thoát chương trình");
+            System.out.println("2. Hiển thị danh sách Employee và Manager theo project id");
+            System.out.println("3. Thêm nhân viên");
+            System.out.println("4. Thoát chương trình");
             System.out.println("Mời bạn chọn đúng chức năng");
             int menu = ScannerUtil.inputInt();
             if (menu==1){

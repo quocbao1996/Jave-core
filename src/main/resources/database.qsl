@@ -15,9 +15,11 @@ CREATE TABLE users (
 );
 
 INSERT INTO users (full_name        , email              , password  , role		 , pro_skill, exp_in_year, project_id)
-VALUES            ('Nguyễn Văn Khoa', 'khoa.nv@gmail.com', '123456Q' , 'EMPLOYEE', 'Java'   , NULL      , 1 ),
-				  ('Nguyễn Ngọc Duy', 'duy.nn@gmail.com' , '123456Q' , 'MANAGER'   , NULL     , 10      , 1  );
-				  ('Nguyễn Văn Thuận', 'thuan.nn@gmail.com' , '123456Q' , 'ADMIN'   , Java     , 10      , 1  );
+VALUES            ('Nguyễn Văn Thuận', 'thuan@gmail.com', '123456Q' , 'EMPLOYEE', 'Java'   , NULL      , 1 ),
+				  ('Lê Trúc Ly', 'ly@gmail.com', '123456Q' , 'EMPLOYEE', 'Java'   , NULL      , 1 ),
+				  ('Trần Trường Giang', 'giang@gmail.com' , '123456Q' , 'MANAGER'   , NULL     , 10      , 1  ),
+				  ('Trương Anh Thi', 'thi@gmail.com' , '123456Q' , 'MANAGER'   , NULL     , 10      , 1  ),
+				  ('Trương Quốc Bảo', 'bao@gmail.com' , '123456Q' , 'ADMIN'   , 'Java'     , 10      , 1  );
 
 DROP PROCEDURE IF EXISTS find_admin_by_email_and_password;
 DELIMITER $$
